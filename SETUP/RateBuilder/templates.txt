@@ -1,0 +1,205 @@
+d_samp_sc9_1	= rst1("d_samp_sc9_1")
+d_samp_sc9_2_3	= rst1("d_samp_sc9_2_3")
+d_samp_sc12_1	= rst1("d_samp_sc12_1")
+d_samp_sc12_2	= rst1("d_samp_sc12_2")
+d_sevm_sc9_1	= rst1("d_sevm_sc9_1")
+d_sevm_sc9_2_3	= rst1("d_sevm_sc9_2_3")
+d_sevm_sc12_1	= rst1("d_sevm_sc12_1")
+d_sevm_sc12_2	= rst1("d_sevm_sc12_2")
+d_sevm_r		= rst1("d_sevm_r")
+d_samp_r		= rst1("d_samp_r")
+
+dim d_samp_sc9_1, d_samp_sc9_2_3, d_samp_sc12_1, d_samp_sc12_2, d_sevm_sc9_1, d_sevm_sc9_2_3, d_sevm_sc12_1, d_sevm_sc12_2, d_sevm_r, d_samp_r
+
+
+
+
+&"','"&d_samp_sc9_1&"','"&d_samp_sc9_2_3&"','"&d_samp_sc12_1&"','"&d_samp_sc12_2&"','"&d_sevm_sc9_1&"','"&d_sevm_sc9_2_3&"','"&d_sevm_sc12_1&"','"&d_sevm_sc12_2&"','"&d_sevm_r&"','"&d_samp_r&"' "&_		
+
+
+"',[d_samp_sc9_1] = '"&d_samp_sc9_1&"',[d_samp_sc9_2_3] = '"&d_samp_sc9_2_3&"',[d_samp_sc12_1] = '"&d_samp_sc12_1&"',[d_samp_sc12_2] = '"&d_samp_sc12_2&"',[d_sevm_sc9_1] = '"&d_sevm_sc9_1&"',[d_sevm_sc9_2_3] = '"&d_sevm_sc9_2_3&"',[d_sevm_sc12_1] = '"&d_sevm_sc12_1&"',[d_sevm_sc12_2] = '"&d_sevm_sc12_2&"',[d_sevm_r] = '"&d_sevm_r&	
+"',[d_samp_r] = '"&d_samp_r&	
+
+
+
+
+
+
+dim conedsc9r1_d_samp, conedsc9r1_d_samp_id	, conedsc9r1_d_sevm, conedsc9r1_d_sevm_id	, conedsc9r2_d_samp, conedsc9r2_d_samp_id	, conedsc9r2_d_sevm, conedsc9r2_d_sevm_id	, conedsc9ra3_d_samp, conedsc9ra3_d_samp_id	, conedsc9ra3_d_sevm, conedsc9ra3_d_sevm_id	, conedsc12r1_d_samp, conedsc12r1_d_samp_id	, conedsc12r1_d_sevm, conedsc12r1_d_sevm_id	, conedsc12r2_d_samp, conedsc12r2_d_samp_id	, conedsc12r2_d_sevm, conedsc12r2_d_sevm_id	
+
+   
+&"','"&  conedsc9r1_d_samp	&"','"&  conedsc9r1_d_sevm	  &"','"&  conedsc9r2_d_samp	  &"','"&  conedsc9r2_d_sevm	  &"','"&  conedsc9ra3_d_samp	  &"','"& conedsc9ra3_d_samp	  &"','"&  conedsc12r2_d_samp	  &"','"&  conedsc12r2_d_sevm	  
+  
+  
+  
+ ALTER TABLE dbcore.dbo.RateBuilderRates
+ADD 
+sc9r1_d_samp  nchar(10) null,
+sc9r1_d_sevm  nchar(10) null,
+sc9r2_d_samp  nchar(10) null,
+sc9r2_d_sevm  nchar(10) null,
+sc9ra1_d_samp nchar(10) null,
+sc9ra1_d_sevm nchar(10) null,
+sc12ra2_d_samp nchar(10) null,
+sc12ra2_d_sevm nchar(10) null,
+sc9r1_d_samp_id  int null,
+sc9r1_d_sevm_id  int null,
+sc9r2_d_samp_id  int null,
+sc9r2_d_sevm_id  int null,
+sc9ra1_d_samp_id int null,
+sc9ra1_d_sevm_id int null,
+sc12ra2_d_samp_id int null,
+sc12ra2_d_sevm_id int null 
+  
+  
+  
+  
+  
+  
+  
+  
+conedsc9r1_d_samp	, conedsc9r1_d_sevm	, conedsc9r2_d_samp	, conedsc9r2_d_sevm	, conedsc9ra3_d_samp	, conedsc9ra3_d_samp	, conedsc12r2_d_samp	, conedsc12r2_d_sevm	
+
+
+,conedsc9r2_d_samp_id	,conedsc9r1_d_sevm_id	,conedsc9r1_d_samp_id,conedsc9ra3_d_samp_id	,conedsc9r2_d_sevm_id	,conedsc9ra3_d_sevm_id	,conedsc12r2_d_samp_id	,conedsc12r2_d_sevm_id	
+
+  &"','"& conedsc9r2_d_samp_id	  &"','"& conedsc9r1_d_sevm_id	  &"','"& conedsc9r1_d_samp_id  &"','"& conedsc9ra3_d_samp_id	  &"','"& conedsc9r2_d_sevm_id	  &"','"& conedsc9ra3_d_sevm_id	  &"','"& conedsc12r1_d_samp_id	  &"','"& conedsc12r1_d_sevm_id	  &"','"& conedsc12r2_d_samp_id	  &"','"& conedsc12r2_d_sevm_id	
+  
+conedsc9r1_d_samp		=  tonumb(request.form("conedsc9r1_d_samp"))  		
+conedsc9r1_d_sevm		=  tonumb(request.form("conedsc9r1_d_sevm"))  	
+conedsc9r2_d_samp		=  tonumb(request.form("conedsc9r2_d_samp"))  	
+conedsc9r2_d_sevm		=  tonumb(request.form("conedsc9r2_d_sevm"))  		
+conedsc9ra3_d_samp		=  tonumb(request.form("conedsc9ra3_d_samp"))  	
+conedsc9ra3_d_samp		=  tonumb(request.form("conedsc9ra3_d_samp"))  	
+conedsc12r2_d_samp		=  tonumb(request.form("conedsc12r2_d_samp"))  
+conedsc12r2_d_sevm		=  tonumb(request.form("conedsc12r2_d_sevm"))  
+
+
+"' ,  [conedsc9r1_d_samp]		=  '"&  conedsc9r1_d_samp &  "' ,  [conedsc9r1_d_sevm]		=  '"&  conedsc9r1_d_sevm &  	"' ,  [conedsc9r2_d_samp]		=  '"&  conedsc9r2_d_samp &  	"' ,  [conedsc9r2_d_sevm]		=  '"&  conedsc9r2_d_sevm &  		"' ,  [conedsc9ra3_d_samp]		=  '"&  conedsc9ra3_d_samp &  	"' ,  [conedsc9ra3_d_samp]		=  '"&  conedsc9ra3_d_samp &  	"' ,  [conedsc12r1_d_samp]		=  '"&  conedsc12r1_d_samp &  "' ,  [conedsc12r1_d_sevm]		=  '"&  conedsc12r1_d_sevm &  "' ,  [conedsc12r2_d_samp]		=  '"&  conedsc12r2_d_samp &  "' ,  [conedsc12r2_d_sevm]		=  '"&  conedsc12r2_d_sevm &  
+
+<input type="hidden" value="<%=conedsc9r1_d_samp	%>" name="conedsc9r1_d_samp"/>   		
+<input type="hidden" value="<%=conedsc9r1_d_sevm	%>" name="conedsc9r1_d_sevm"/>   	
+<input type="hidden" value="<%=conedsc9r2_d_samp	%>" name="conedsc9r2_d_samp"/>   	
+<input type="hidden" value="<%=conedsc9r2_d_sevm	%>" name="conedsc9r2_d_sevm"/>   		
+<input type="hidden" value="<%=conedsc9ra3_d_samp	%>" name="conedsc9ra3_d_samp"/>   	
+<input type="hidden" value="<%=conedsc9ra3_d_samp	%>" name="conedsc9ra3_d_samp"/>   	
+<input type="hidden" value="<%=conedsc12r1_d_samp	%>" name="conedsc12r1_d_samp"/>   
+<input type="hidden" value="<%=conedsc12r1_d_sevm	%>" name="conedsc12r1_d_sevm"/>   
+<input type="hidden" value="<%=conedsc12r2_d_samp	%>" name="conedsc12r2_d_samp"/>   
+<input type="hidden" value="<%=conedsc12r2_d_sevm	%>" name="conedsc12r2_d_sevm"/> 
+
+
+<tr style='mso-yfti-irow:17;height:15.0pt'>
+  <td width=83 nowrap valign=bottom style='width:62.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'></td>
+  <td width=241 nowrap valign=bottom style='width:180.7pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+  color:black'>Dynamic Load Management Surcharge<o:p></o:p></span></p>
+  </td>
+  <td width=251 nowrap valign=bottom style='width:188.4pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+  color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:93.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b style='mso-bidi-font-weight:normal'><span style='mso-ascii-font-family:
+  Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
+  mso-bidi-font-family:Calibri;color:black'><%= conedsc9ra3_d_dlms %></span></b></p>
+  </td>
+ </tr>
+<tr style='mso-yfti-irow:17;height:15.0pt'>
+  <td width=83 nowrap valign=bottom style='width:62.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'></td>
+  <td width=241 nowrap valign=bottom style='width:180.7pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+  color:black'>Arrears Management Program Recovery Surcharge<o:p></o:p></span></p>
+  </td>
+  <td width=251 nowrap valign=bottom style='width:188.4pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+  color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:93.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b style='mso-bidi-font-weight:normal'><span style='mso-ascii-font-family:
+  Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
+  mso-bidi-font-family:Calibri;color:black'><%= conedsc9ra3_d_samp %></span></b></p>
+  </td>
+ </tr> 
+ <tr style='mso-yfti-irow:17;height:15.0pt'>
+  <td width=83 nowrap valign=bottom style='width:62.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'></td>
+  <td width=241 nowrap valign=bottom style='width:180.7pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+  color:black'>Electric Vehicle Make Ready Surcharge<o:p></o:p></span></p>
+  </td>
+  <td width=251 nowrap valign=bottom style='width:188.4pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='mso-ascii-font-family:Calibri;mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri;
+  color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=125 nowrap valign=bottom style='width:93.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b style='mso-bidi-font-weight:normal'><span style='mso-ascii-font-family:
+  Calibri;mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
+  mso-bidi-font-family:Calibri;color:black'><%= conedsc9ra3_d_sevm %></span></b></p>
+  </td>
+ </tr> 
+ 
+ 
+ 
+ 
+sc9r1_d_samp   	=  tonumb(request.form("sc9r1_d_samp"))  		 
+sc9r1_d_sevm   	=  tonumb(request.form("sc9r1_d_sevm"))  		
+sc9r2_d_samp   	=  tonumb(request.form("sc9r2_d_samp"))  		
+sc9r2_d_sevm   	=  tonumb(request.form("sc9r2_d_sevm"))  		
+sc9ra1_d_samp  	=  tonumb(request.form("sc9ra1_d_samp"))  		 
+sc9ra1_d_sevm  	=  tonumb(request.form("sc9ra1_d_sevm"))  		 
+sc12ra2_d_samp 	=  tonumb(request.form("sc12ra2_d_samp"))  		 
+sc12ra2_d_sevm 	=  tonumb(request.form("sc12ra2_d_sevm"))  		 
+
+sc9r1_d_samp_id  ,
+sc9r1_d_sevm_id  ,
+sc9r2_d_samp_id  ,
+sc9r2_d_sevm_id  ,
+sc9ra1_d_samp_id ,
+sc9ra1_d_sevm_id ,
+sc12ra2_d_samp_id ,
+sc12ra2_d_sevm_id 
+	  &"','"&  sc9r1_d_samp,  	  &"','"&  sc9r1_d_sevm,   	  &"','"&  sc9r2_d_samp,   	  &"','"&  sc9r2_d_sevm,   	  &"','"&  sc9ra1_d_samp,  	  &"','"&  sc9ra1_d_sevm,  	  &"','"&  sc12ra2_d_samp 	  &"','"&  sc12ra2_d_sevm 
+
+
+<input type="hidden" value="<%=sc9r1_d_samp   	%>" name="sc9r1_d_samp"/>   
+<input type="hidden" value="<%=sc9r1_d_sevm   	%>" name="sc9r1_d_sevm"/> 
+<input type="hidden" value="<%=sc9r2_d_samp   	%>" name="sc9r2_d_samp"/> 
+<input type="hidden" value="<%=sc9r2_d_sevm   	%>" name="sc9r2_d_sevm"/>  
+<input type="hidden" value="<%=sc9ra1_d_samp  	%>" name="sc9ra1_d_samp"/> 
+<input type="hidden" value="<%=sc9ra1_d_sevm  	%>" name="sc9ra1_d_sevm"/> 
+<input type="hidden" value="<%=sc12ra2_d_samp 	%>" name="sc12ra2_d_samp"/> 
+<input type="hidden" value="<%=sc12ra2_d_sevm 	%>" name="sc12ra2_d_sevm"/> 
+
+ &  "' ,  [sc9r1_d_samp]		=  '"&  sc9r1_d_samp  &  "' ,  [sc9r1_d_sevm]		=  '"&  sc9r1_d_sevm &  "' ,  [sc9r2_d_samp]		=  '"&  sc9r2_d_samp &  "' ,  [sc9r2_d_sevm]		=  '"&  sc9r2_d_sevm &  "' ,  [sc9ra1_d_samp]		=  '"&  sc9ra1_d_samp  &  "' ,  [sc9ra1_d_sevm]		=  '"&  sc9ra1_d_sevm  &  "' ,  [sc12ra2_d_samp]		=  '"&  sc12ra2_d_samp  &  "' ,  [sc12ra2_d_sevm]		=  '"&  sc12ra2_d_sevm 
+ 
+ 
+set @dr1=isnull(@dr1a,0)+isnull(@dr1b,0)+isnull(@dr1c,0)
+set @dr2=isnull(@dr2a,0)+isnull(@dr2b,0)+isnull(@dr2c,0)
+set @dr3=isnull(@dr3a,0)+isnull(@dr3b,0)+isnull(@dr3c,0)
